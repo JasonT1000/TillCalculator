@@ -38,11 +38,11 @@ namespace TillCalculator
             total += (fiveDollarCount * 5);
             total += oneDollarCount;
             total += (twoDollarCount * 2);
-            total += Math.Round((fiftyCentCount * 0.5), 1);
-            total += Math.Round((twentyCentCount * 0.2), 1);
-            total += Math.Round((tenCentCount * 0.1), 1);
+            total += Math.Round((fiftyCentCount * 0.5), 2);
+            total += Math.Round((twentyCentCount * 0.2), 2);
+            total += Math.Round((tenCentCount * 0.1), 2);
 
-            labelTotal.Text = total.ToString("F1");
+            labelTotal.Text = "$ " + total.ToString("F2");
         }
 
         // Selects all content inside a numeric input
@@ -92,7 +92,7 @@ namespace TillCalculator
             numericUpDownTenCent.Value = 0;
 
             total = 0;
-            labelTotal.Text = total.ToString();
+            labelTotal.Text = "$ " + total.ToString("F2");
         }
 
         // ------------------------------ 100 DOLLARS ----------------------------
