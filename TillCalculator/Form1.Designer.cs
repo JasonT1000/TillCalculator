@@ -107,6 +107,7 @@
             // 
             numericUpDownTenCent.Font = new Font("Segoe UI", 12F);
             numericUpDownTenCent.Location = new Point(471, 237);
+            numericUpDownTenCent.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownTenCent.Name = "numericUpDownTenCent";
             numericUpDownTenCent.Size = new Size(141, 34);
             numericUpDownTenCent.TabIndex = 18;
@@ -131,6 +132,7 @@
             // 
             numericUpDownTwentyCent.Font = new Font("Segoe UI", 12F);
             numericUpDownTwentyCent.Location = new Point(154, 237);
+            numericUpDownTwentyCent.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownTwentyCent.Name = "numericUpDownTwentyCent";
             numericUpDownTwentyCent.Size = new Size(141, 34);
             numericUpDownTwentyCent.TabIndex = 16;
@@ -155,6 +157,7 @@
             // 
             numericUpDownFiftyCent.Font = new Font("Segoe UI", 12F);
             numericUpDownFiftyCent.Location = new Point(471, 185);
+            numericUpDownFiftyCent.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownFiftyCent.Name = "numericUpDownFiftyCent";
             numericUpDownFiftyCent.Size = new Size(141, 34);
             numericUpDownFiftyCent.TabIndex = 14;
@@ -179,6 +182,7 @@
             // 
             numericUpDownOneDollar.Font = new Font("Segoe UI", 12F);
             numericUpDownOneDollar.Location = new Point(154, 185);
+            numericUpDownOneDollar.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownOneDollar.Name = "numericUpDownOneDollar";
             numericUpDownOneDollar.Size = new Size(141, 34);
             numericUpDownOneDollar.TabIndex = 12;
@@ -203,6 +207,7 @@
             // 
             numericUpDownTwoDollar.Font = new Font("Segoe UI", 12F);
             numericUpDownTwoDollar.Location = new Point(471, 135);
+            numericUpDownTwoDollar.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownTwoDollar.Name = "numericUpDownTwoDollar";
             numericUpDownTwoDollar.Size = new Size(141, 34);
             numericUpDownTwoDollar.TabIndex = 10;
@@ -227,6 +232,7 @@
             // 
             numericUpDownFiveDollar.Font = new Font("Segoe UI", 12F);
             numericUpDownFiveDollar.Location = new Point(154, 135);
+            numericUpDownFiveDollar.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownFiveDollar.Name = "numericUpDownFiveDollar";
             numericUpDownFiveDollar.Size = new Size(141, 34);
             numericUpDownFiveDollar.TabIndex = 8;
@@ -251,6 +257,7 @@
             // 
             numericUpDownTenDollar.Font = new Font("Segoe UI", 12F);
             numericUpDownTenDollar.Location = new Point(471, 83);
+            numericUpDownTenDollar.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownTenDollar.Name = "numericUpDownTenDollar";
             numericUpDownTenDollar.Size = new Size(141, 34);
             numericUpDownTenDollar.TabIndex = 6;
@@ -275,6 +282,7 @@
             // 
             numericUpDownTwentyDollar.Font = new Font("Segoe UI", 12F);
             numericUpDownTwentyDollar.Location = new Point(154, 83);
+            numericUpDownTwentyDollar.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownTwentyDollar.Name = "numericUpDownTwentyDollar";
             numericUpDownTwentyDollar.Size = new Size(141, 34);
             numericUpDownTwentyDollar.TabIndex = 4;
@@ -299,6 +307,7 @@
             // 
             numericUpDownFiftyDollar.Font = new Font("Segoe UI", 12F);
             numericUpDownFiftyDollar.Location = new Point(471, 32);
+            numericUpDownFiftyDollar.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownFiftyDollar.Name = "numericUpDownFiftyDollar";
             numericUpDownFiftyDollar.Size = new Size(141, 34);
             numericUpDownFiftyDollar.TabIndex = 2;
@@ -323,6 +332,7 @@
             // 
             numericUpDownHundredDollar.Font = new Font("Segoe UI", 12F);
             numericUpDownHundredDollar.Location = new Point(154, 32);
+            numericUpDownHundredDollar.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownHundredDollar.Name = "numericUpDownHundredDollar";
             numericUpDownHundredDollar.Size = new Size(141, 34);
             numericUpDownHundredDollar.TabIndex = 0;

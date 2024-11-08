@@ -95,9 +95,34 @@ namespace TillCalculator
             labelTotal.Text = "$ " + total.ToString("F2");
         }
 
+        private void numericUpDown_Leave(object sender, EventArgs e)
+        {
+            //MessageBox.Show(((NumericUpDown)sender).Value.ToString());
+            //MessageBox.Show(((NumericUpDown)sender).Name.ToString());
+            int count = int.Parse(((NumericUpDown)sender).Value.ToString());
+
+            switch (((NumericUpDown)sender).Name.ToString())
+            {
+                case "numericUpDownHundredDollar":
+                    onehundredDollarCount = count;
+                    break;
+                case "numericUpDownFiftyDollar":
+                    fiftyDollarCount = count;
+                    break;
+                case "numericUpDownTwentyDollar":
+                    twentyDollarCount = count;
+                    break;
+
+            }
+
+            updateTotal();
+        }
+
         // ------------------------------ 100 DOLLARS ----------------------------
         private void numericUpDownHundredDollar_Leave(object sender, EventArgs e)
         {
+            //MessageBox.Show(((NumericUpDown)sender).Value.ToString());
+            MessageBox.Show(((NumericUpDown)sender).Name.ToString());
             onehundredDollarCount = int.Parse(numericUpDownHundredDollar.Value.ToString());
             updateTotal();
         }
