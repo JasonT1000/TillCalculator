@@ -1,4 +1,8 @@
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime.Versioning;
+
+[assembly: SupportedOSPlatform("windows")]
+
 
 namespace TillCalculator
 {
@@ -24,11 +28,6 @@ namespace TillCalculator
         }
 
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void updateTotal()
         {
             total = 0;
@@ -46,6 +45,26 @@ namespace TillCalculator
             labelTotal.Text = total.ToString("F1");
         }
 
+        // Selects all content inside a numeric input
+        private void numericUpDown_SelectAllContents(object sender, EventArgs e)
+        {
+            ((NumericUpDown)sender).Select(0, ((NumericUpDown)sender).Text.Length);
+        }
+
+        // Validate input to stop decimals being input
+        private void numericUpDownValidate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Allow control keys, e.g., backspace
+            if (char.IsControl(e.KeyChar)) return;
+
+            // Allow only digits
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        // Clears all inputs, counters and totals to 0
         private void buttonClear_Click(object sender, EventArgs e)
         {
             // Counts
@@ -75,6 +94,7 @@ namespace TillCalculator
             total = 0;
             labelTotal.Text = total.ToString();
         }
+
         // ------------------------------ 100 DOLLARS ----------------------------
         private void numericUpDownHundredDollar_Leave(object sender, EventArgs e)
         {
@@ -89,10 +109,9 @@ namespace TillCalculator
                 updateTotal();
             }
         }
-
-        private void numericUpDown_Enter(object sender, EventArgs e)
+        private void numericUpDownHundredDollar_Click(object sender, EventArgs e)
         {
-            ((NumericUpDown)sender).Select(0, ((NumericUpDown)sender).Text.Length);
+            numericUpDown_SelectAllContents(sender, e);
         }
 
         // ------------------------------ 50 DOLLARS ----------------------------
@@ -104,11 +123,14 @@ namespace TillCalculator
                 updateTotal();
             }
         }
-
         private void numericUpDownFiftyDollar_Leave(object sender, EventArgs e)
         {
             fiftyDollarCount = int.Parse(numericUpDownFiftyDollar.Value.ToString());
             updateTotal();
+        }
+        private void numericUpDownFiftyDollar_Click(object sender, EventArgs e)
+        {
+            numericUpDown_SelectAllContents(sender, e);
         }
 
         // ------------------------------ 20 DOLLARS ----------------------------
@@ -126,6 +148,10 @@ namespace TillCalculator
             twentyDollarCount = int.Parse(numericUpDownTwentyDollar.Value.ToString());
             updateTotal();
         }
+        private void numericUpDownTwentyDollar_Click(object sender, EventArgs e)
+        {
+            numericUpDown_SelectAllContents(sender, e);
+        }
 
         // ------------------------------ 10 DOLLARS ----------------------------
         private void numericUpDownTenDollar_KeyUp(object sender, KeyEventArgs e)
@@ -136,11 +162,14 @@ namespace TillCalculator
                 updateTotal();
             }
         }
-
         private void numericUpDownTenDollar_Leave(object sender, EventArgs e)
         {
             tenDollarCount = int.Parse(numericUpDownTenDollar.Value.ToString());
             updateTotal();
+        }
+        private void numericUpDownTenDollar_Click(object sender, EventArgs e)
+        {
+            numericUpDown_SelectAllContents(sender, e);
         }
 
         // ------------------------------ 5 DOLLARS ----------------------------
@@ -158,6 +187,10 @@ namespace TillCalculator
             fiveDollarCount = int.Parse(numericUpDownFiveDollar.Value.ToString());
             updateTotal();
         }
+        private void numericUpDownFiveDollar_Click(object sender, EventArgs e)
+        {
+            numericUpDown_SelectAllContents(sender, e);
+        }
 
         // ------------------------------ 2 DOLLARS ----------------------------
         private void numericUpDownTwoDollar_KeyUp(object sender, KeyEventArgs e)
@@ -174,6 +207,10 @@ namespace TillCalculator
             twoDollarCount = int.Parse(numericUpDownTwoDollar.Value.ToString());
             updateTotal();
         }
+        private void numericUpDownTwoDollar_Click(object sender, EventArgs e)
+        {
+            numericUpDown_SelectAllContents(sender, e);
+        }
 
         // ------------------------------ 1 DOLLARS ----------------------------
         private void numericUpDownOneDollar_KeyUp(object sender, KeyEventArgs e)
@@ -184,11 +221,14 @@ namespace TillCalculator
                 updateTotal();
             }
         }
-
         private void numericUpDownOneDollar_Leave(object sender, EventArgs e)
         {
             oneDollarCount = int.Parse(numericUpDownOneDollar.Value.ToString());
             updateTotal();
+        }
+        private void numericUpDownOneDollar_Click(object sender, EventArgs e)
+        {
+            numericUpDown_SelectAllContents(sender, e);
         }
 
         // ------------------------------ 50 CENTS ----------------------------
@@ -200,11 +240,14 @@ namespace TillCalculator
                 updateTotal();
             }
         }
-
         private void numericUpDownFiftyCent_Leave(object sender, EventArgs e)
         {
             fiftyCentCount = int.Parse(numericUpDownFiftyCent.Value.ToString());
             updateTotal();
+        }
+        private void numericUpDownFiftyCent_Click(object sender, EventArgs e)
+        {
+            numericUpDown_SelectAllContents(sender, e);
         }
 
         // ------------------------------ 20 CENTS ----------------------------
@@ -216,11 +259,14 @@ namespace TillCalculator
                 updateTotal();
             }
         }
-
         private void numericUpDownTwentyCent_Leave(object sender, EventArgs e)
         {
             twentyCentCount = int.Parse(numericUpDownTwentyCent.Value.ToString());
             updateTotal();
+        }
+        private void numericUpDownTwentyCent_Click(object sender, EventArgs e)
+        {
+            numericUpDown_SelectAllContents(sender, e);
         }
 
         // ------------------------------ 10 CENTS ----------------------------
@@ -232,11 +278,14 @@ namespace TillCalculator
                 updateTotal();
             }
         }
-
         private void numericUpDownTenCent_Leave(object sender, EventArgs e)
         {
             tenCentCount = int.Parse(numericUpDownTenCent.Value.ToString());
             updateTotal();
+        }
+        private void numericUpDownTenCent_Click(object sender, EventArgs e)
+        {
+            numericUpDown_SelectAllContents(sender, e);
         }
     }
 }

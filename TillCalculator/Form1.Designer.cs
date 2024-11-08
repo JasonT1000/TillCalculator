@@ -86,33 +86,37 @@
             groupBox1.Controls.Add(numericUpDownFiftyDollar);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(numericUpDownHundredDollar);
-            groupBox1.Location = new Point(12, 12);
+            groupBox1.Location = new Point(10, 9);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(776, 298);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(566, 224);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Number of Notes / Coins";
-            groupBox1.Enter += groupBox1_Enter;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11F);
-            label9.Location = new Point(402, 247);
+            label9.Location = new Point(306, 181);
             label9.Name = "label9";
-            label9.Size = new Size(103, 25);
+            label9.Size = new Size(80, 20);
             label9.TabIndex = 19;
             label9.Text = "¢ 10 Cents:";
             // 
             // numericUpDownTenCent
             // 
             numericUpDownTenCent.Font = new Font("Segoe UI", 12F);
-            numericUpDownTenCent.Location = new Point(523, 242);
+            numericUpDownTenCent.Location = new Point(412, 178);
+            numericUpDownTenCent.Margin = new Padding(3, 2, 3, 2);
             numericUpDownTenCent.Name = "numericUpDownTenCent";
-            numericUpDownTenCent.Size = new Size(141, 34);
+            numericUpDownTenCent.Size = new Size(123, 29);
             numericUpDownTenCent.TabIndex = 18;
             numericUpDownTenCent.TextAlign = HorizontalAlignment.Right;
-            numericUpDownTenCent.Enter += numericUpDown_Enter;
+            numericUpDownTenCent.Click += numericUpDownTenCent_Click;
+            numericUpDownTenCent.Enter += numericUpDown_SelectAllContents;
+            numericUpDownTenCent.KeyPress += numericUpDownValidate_KeyPress;
             numericUpDownTenCent.KeyUp += numericUpDownTenCent_KeyUp;
             numericUpDownTenCent.Leave += numericUpDownTenCent_Leave;
             // 
@@ -120,21 +124,24 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 11F);
-            label10.Location = new Point(86, 247);
+            label10.Location = new Point(29, 181);
             label10.Name = "label10";
-            label10.Size = new Size(103, 25);
+            label10.Size = new Size(80, 20);
             label10.TabIndex = 17;
             label10.Text = "¢ 20 Cents:";
             // 
             // numericUpDownTwentyCent
             // 
             numericUpDownTwentyCent.Font = new Font("Segoe UI", 12F);
-            numericUpDownTwentyCent.Location = new Point(207, 242);
+            numericUpDownTwentyCent.Location = new Point(135, 178);
+            numericUpDownTwentyCent.Margin = new Padding(3, 2, 3, 2);
             numericUpDownTwentyCent.Name = "numericUpDownTwentyCent";
-            numericUpDownTwentyCent.Size = new Size(141, 34);
+            numericUpDownTwentyCent.Size = new Size(123, 29);
             numericUpDownTwentyCent.TabIndex = 16;
             numericUpDownTwentyCent.TextAlign = HorizontalAlignment.Right;
-            numericUpDownTwentyCent.Enter += numericUpDown_Enter;
+            numericUpDownTwentyCent.Click += numericUpDownTwentyCent_Click;
+            numericUpDownTwentyCent.Enter += numericUpDown_SelectAllContents;
+            numericUpDownTwentyCent.KeyPress += numericUpDownValidate_KeyPress;
             numericUpDownTwentyCent.KeyUp += numericUpDownTwentyCent_KeyUp;
             numericUpDownTwentyCent.Leave += numericUpDownTwentyCent_Leave;
             // 
@@ -142,21 +149,24 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(402, 196);
+            label5.Location = new Point(306, 143);
             label5.Name = "label5";
-            label5.Size = new Size(103, 25);
+            label5.Size = new Size(80, 20);
             label5.TabIndex = 15;
             label5.Text = "¢ 50 Cents:";
             // 
             // numericUpDownFiftyCent
             // 
             numericUpDownFiftyCent.Font = new Font("Segoe UI", 12F);
-            numericUpDownFiftyCent.Location = new Point(523, 191);
+            numericUpDownFiftyCent.Location = new Point(412, 139);
+            numericUpDownFiftyCent.Margin = new Padding(3, 2, 3, 2);
             numericUpDownFiftyCent.Name = "numericUpDownFiftyCent";
-            numericUpDownFiftyCent.Size = new Size(141, 34);
+            numericUpDownFiftyCent.Size = new Size(123, 29);
             numericUpDownFiftyCent.TabIndex = 14;
             numericUpDownFiftyCent.TextAlign = HorizontalAlignment.Right;
-            numericUpDownFiftyCent.Enter += numericUpDown_Enter;
+            numericUpDownFiftyCent.Click += numericUpDownFiftyCent_Click;
+            numericUpDownFiftyCent.Enter += numericUpDown_SelectAllContents;
+            numericUpDownFiftyCent.KeyPress += numericUpDownValidate_KeyPress;
             numericUpDownFiftyCent.KeyUp += numericUpDownFiftyCent_KeyUp;
             numericUpDownFiftyCent.Leave += numericUpDownFiftyCent_Leave;
             // 
@@ -164,21 +174,24 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11F);
-            label6.Location = new Point(86, 196);
+            label6.Location = new Point(29, 143);
             label6.Name = "label6";
-            label6.Size = new Size(93, 25);
+            label6.Size = new Size(72, 20);
             label6.TabIndex = 13;
             label6.Text = "$ 1 Coins:";
             // 
             // numericUpDownOneDollar
             // 
             numericUpDownOneDollar.Font = new Font("Segoe UI", 12F);
-            numericUpDownOneDollar.Location = new Point(207, 191);
+            numericUpDownOneDollar.Location = new Point(135, 139);
+            numericUpDownOneDollar.Margin = new Padding(3, 2, 3, 2);
             numericUpDownOneDollar.Name = "numericUpDownOneDollar";
-            numericUpDownOneDollar.Size = new Size(141, 34);
+            numericUpDownOneDollar.Size = new Size(123, 29);
             numericUpDownOneDollar.TabIndex = 12;
             numericUpDownOneDollar.TextAlign = HorizontalAlignment.Right;
-            numericUpDownOneDollar.Enter += numericUpDown_Enter;
+            numericUpDownOneDollar.Click += numericUpDownOneDollar_Click;
+            numericUpDownOneDollar.Enter += numericUpDown_SelectAllContents;
+            numericUpDownOneDollar.KeyPress += numericUpDownValidate_KeyPress;
             numericUpDownOneDollar.KeyUp += numericUpDownOneDollar_KeyUp;
             numericUpDownOneDollar.Leave += numericUpDownOneDollar_Leave;
             // 
@@ -186,21 +199,24 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F);
-            label7.Location = new Point(402, 145);
+            label7.Location = new Point(306, 105);
             label7.Name = "label7";
-            label7.Size = new Size(93, 25);
+            label7.Size = new Size(72, 20);
             label7.TabIndex = 11;
             label7.Text = "$ 2 Coins:";
             // 
             // numericUpDownTwoDollar
             // 
             numericUpDownTwoDollar.Font = new Font("Segoe UI", 12F);
-            numericUpDownTwoDollar.Location = new Point(523, 140);
+            numericUpDownTwoDollar.Location = new Point(412, 101);
+            numericUpDownTwoDollar.Margin = new Padding(3, 2, 3, 2);
             numericUpDownTwoDollar.Name = "numericUpDownTwoDollar";
-            numericUpDownTwoDollar.Size = new Size(141, 34);
+            numericUpDownTwoDollar.Size = new Size(123, 29);
             numericUpDownTwoDollar.TabIndex = 10;
             numericUpDownTwoDollar.TextAlign = HorizontalAlignment.Right;
-            numericUpDownTwoDollar.Enter += numericUpDown_Enter;
+            numericUpDownTwoDollar.Click += numericUpDownTwoDollar_Click;
+            numericUpDownTwoDollar.Enter += numericUpDown_SelectAllContents;
+            numericUpDownTwoDollar.KeyPress += numericUpDownValidate_KeyPress;
             numericUpDownTwoDollar.KeyUp += numericUpDownTwoDollar_KeyUp;
             numericUpDownTwoDollar.Leave += numericUpDownTwoDollar_Leave;
             // 
@@ -208,21 +224,24 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11F);
-            label8.Location = new Point(86, 145);
+            label8.Location = new Point(29, 105);
             label8.Name = "label8";
-            label8.Size = new Size(95, 25);
+            label8.Size = new Size(75, 20);
             label8.TabIndex = 9;
             label8.Text = "$ 5 Notes:";
             // 
             // numericUpDownFiveDollar
             // 
             numericUpDownFiveDollar.Font = new Font("Segoe UI", 12F);
-            numericUpDownFiveDollar.Location = new Point(207, 140);
+            numericUpDownFiveDollar.Location = new Point(135, 101);
+            numericUpDownFiveDollar.Margin = new Padding(3, 2, 3, 2);
             numericUpDownFiveDollar.Name = "numericUpDownFiveDollar";
-            numericUpDownFiveDollar.Size = new Size(141, 34);
+            numericUpDownFiveDollar.Size = new Size(123, 29);
             numericUpDownFiveDollar.TabIndex = 8;
             numericUpDownFiveDollar.TextAlign = HorizontalAlignment.Right;
-            numericUpDownFiveDollar.Enter += numericUpDown_Enter;
+            numericUpDownFiveDollar.Click += numericUpDownFiveDollar_Click;
+            numericUpDownFiveDollar.Enter += numericUpDown_SelectAllContents;
+            numericUpDownFiveDollar.KeyPress += numericUpDownValidate_KeyPress;
             numericUpDownFiveDollar.KeyUp += numericUpDownFiveDollar_KeyUp;
             numericUpDownFiveDollar.Leave += numericUpDownFiveDollar_Leave;
             // 
@@ -230,21 +249,24 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(402, 93);
+            label3.Location = new Point(306, 66);
             label3.Name = "label3";
-            label3.Size = new Size(105, 25);
+            label3.Size = new Size(83, 20);
             label3.TabIndex = 7;
             label3.Text = "$ 10 Notes:";
             // 
             // numericUpDownTenDollar
             // 
             numericUpDownTenDollar.Font = new Font("Segoe UI", 12F);
-            numericUpDownTenDollar.Location = new Point(523, 88);
+            numericUpDownTenDollar.Location = new Point(412, 62);
+            numericUpDownTenDollar.Margin = new Padding(3, 2, 3, 2);
             numericUpDownTenDollar.Name = "numericUpDownTenDollar";
-            numericUpDownTenDollar.Size = new Size(141, 34);
+            numericUpDownTenDollar.Size = new Size(123, 29);
             numericUpDownTenDollar.TabIndex = 6;
             numericUpDownTenDollar.TextAlign = HorizontalAlignment.Right;
-            numericUpDownTenDollar.Enter += numericUpDown_Enter;
+            numericUpDownTenDollar.Click += numericUpDownTenDollar_Click;
+            numericUpDownTenDollar.Enter += numericUpDown_SelectAllContents;
+            numericUpDownTenDollar.KeyPress += numericUpDownValidate_KeyPress;
             numericUpDownTenDollar.KeyUp += numericUpDownTenDollar_KeyUp;
             numericUpDownTenDollar.Leave += numericUpDownTenDollar_Leave;
             // 
@@ -252,21 +274,24 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
-            label4.Location = new Point(86, 93);
+            label4.Location = new Point(29, 66);
             label4.Name = "label4";
-            label4.Size = new Size(105, 25);
+            label4.Size = new Size(83, 20);
             label4.TabIndex = 5;
             label4.Text = "$ 20 Notes:";
             // 
             // numericUpDownTwentyDollar
             // 
             numericUpDownTwentyDollar.Font = new Font("Segoe UI", 12F);
-            numericUpDownTwentyDollar.Location = new Point(207, 88);
+            numericUpDownTwentyDollar.Location = new Point(135, 62);
+            numericUpDownTwentyDollar.Margin = new Padding(3, 2, 3, 2);
             numericUpDownTwentyDollar.Name = "numericUpDownTwentyDollar";
-            numericUpDownTwentyDollar.Size = new Size(141, 34);
+            numericUpDownTwentyDollar.Size = new Size(123, 29);
             numericUpDownTwentyDollar.TabIndex = 4;
             numericUpDownTwentyDollar.TextAlign = HorizontalAlignment.Right;
-            numericUpDownTwentyDollar.Enter += numericUpDown_Enter;
+            numericUpDownTwentyDollar.Click += numericUpDownTwentyDollar_Click;
+            numericUpDownTwentyDollar.Enter += numericUpDown_SelectAllContents;
+            numericUpDownTwentyDollar.KeyPress += numericUpDownValidate_KeyPress;
             numericUpDownTwentyDollar.KeyUp += numericUpDownTwentyDollar_KeyUp;
             numericUpDownTwentyDollar.Leave += numericUpDownTwentyDollar_Leave;
             // 
@@ -274,21 +299,24 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(402, 42);
+            label2.Location = new Point(306, 28);
             label2.Name = "label2";
-            label2.Size = new Size(105, 25);
+            label2.Size = new Size(83, 20);
             label2.TabIndex = 3;
             label2.Text = "$ 50 Notes:";
             // 
             // numericUpDownFiftyDollar
             // 
             numericUpDownFiftyDollar.Font = new Font("Segoe UI", 12F);
-            numericUpDownFiftyDollar.Location = new Point(523, 37);
+            numericUpDownFiftyDollar.Location = new Point(412, 24);
+            numericUpDownFiftyDollar.Margin = new Padding(3, 2, 3, 2);
             numericUpDownFiftyDollar.Name = "numericUpDownFiftyDollar";
-            numericUpDownFiftyDollar.Size = new Size(141, 34);
+            numericUpDownFiftyDollar.Size = new Size(123, 29);
             numericUpDownFiftyDollar.TabIndex = 2;
             numericUpDownFiftyDollar.TextAlign = HorizontalAlignment.Right;
-            numericUpDownFiftyDollar.Enter += numericUpDown_Enter;
+            numericUpDownFiftyDollar.Click += numericUpDownFiftyDollar_Click;
+            numericUpDownFiftyDollar.Enter += numericUpDown_SelectAllContents;
+            numericUpDownFiftyDollar.KeyPress += numericUpDownValidate_KeyPress;
             numericUpDownFiftyDollar.KeyUp += numericUpDownFiftyDollar_KeyUp;
             numericUpDownFiftyDollar.Leave += numericUpDownFiftyDollar_Leave;
             // 
@@ -296,30 +324,34 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(86, 42);
+            label1.Location = new Point(29, 28);
             label1.Name = "label1";
-            label1.Size = new Size(115, 25);
+            label1.Size = new Size(91, 20);
             label1.TabIndex = 1;
             label1.Text = "$ 100 Notes:";
             // 
             // numericUpDownHundredDollar
             // 
             numericUpDownHundredDollar.Font = new Font("Segoe UI", 12F);
-            numericUpDownHundredDollar.Location = new Point(207, 37);
+            numericUpDownHundredDollar.Location = new Point(135, 24);
+            numericUpDownHundredDollar.Margin = new Padding(3, 2, 3, 2);
             numericUpDownHundredDollar.Name = "numericUpDownHundredDollar";
-            numericUpDownHundredDollar.Size = new Size(141, 34);
+            numericUpDownHundredDollar.Size = new Size(123, 29);
             numericUpDownHundredDollar.TabIndex = 0;
             numericUpDownHundredDollar.TextAlign = HorizontalAlignment.Right;
-            numericUpDownHundredDollar.Enter += numericUpDown_Enter;
+            numericUpDownHundredDollar.Click += numericUpDownHundredDollar_Click;
+            numericUpDownHundredDollar.Enter += numericUpDown_SelectAllContents;
+            numericUpDownHundredDollar.KeyPress += numericUpDownValidate_KeyPress;
             numericUpDownHundredDollar.KeyUp += numericUpDownHundredDollar_KeyUp;
             numericUpDownHundredDollar.Leave += numericUpDownHundredDollar_Leave;
             // 
             // buttonClear
             // 
             buttonClear.Font = new Font("Segoe UI", 12F);
-            buttonClear.Location = new Point(332, 347);
+            buttonClear.Location = new Point(250, 263);
+            buttonClear.Margin = new Padding(3, 2, 3, 2);
             buttonClear.Name = "buttonClear";
-            buttonClear.Size = new Size(92, 47);
+            buttonClear.Size = new Size(80, 35);
             buttonClear.TabIndex = 2;
             buttonClear.Text = "Clear";
             buttonClear.UseVisualStyleBackColor = true;
@@ -329,20 +361,21 @@
             // 
             labelTotal.AutoSize = true;
             labelTotal.Font = new Font("Segoe UI", 16F);
-            labelTotal.Location = new Point(608, 357);
+            labelTotal.Location = new Point(487, 263);
             labelTotal.Name = "labelTotal";
-            labelTotal.Size = new Size(32, 37);
+            labelTotal.Size = new Size(25, 30);
             labelTotal.TabIndex = 3;
             labelTotal.Text = "0";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(586, 320);
             Controls.Add(labelTotal);
             Controls.Add(buttonClear);
             Controls.Add(groupBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             groupBox1.ResumeLayout(false);
